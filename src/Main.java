@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        feeCount FC=new feeCount();
+        System.out.println(FC.calcAll(6,15,9,15));
     }
 }
