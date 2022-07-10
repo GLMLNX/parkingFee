@@ -35,8 +35,38 @@ public class Main {
                 }
             }
         }
+        System.out.println("Insert hour-OUT");
+        while(true){
+            if(!scanner.hasNextInt()){
+                System.out.println("Incorrect Input");
+                scanner.next();
+            }else {
+                hS= scanner.nextInt();
+                if(hS<=23 && hS>=0){
+                    break;
+                }else {
+                    System.out.println("Incorrect hour");
+                    scanner.next();
+                }
+            }
+        }
+        System.out.println("Insert minute-OUT");
+        while(true){
+            if(!scanner.hasNextInt()){
+                System.out.println("Incorrect Input");
+                scanner.next();
+            }else {
+                mS= scanner.nextInt();
+                if(mS<=59 && mS>=0){
+                    break;
+                }else {
+                    System.out.println("Incorrect minute");
+                    scanner.next();
+                }
+            }
+        }
 
-        System.out.println(hE+"h:"+mE+"m\n"+hS+"h:"+mS+"m");
-        System.out.println(FC.calcAll(hE,mE,23,59));
+        System.out.println("Entrance time "+hE+"h:"+mE+"m\nExit time "+hS+"h:"+mS+"m");
+        System.out.println(FC.calcAll(hE,mE,hS,mS));
     }
 }
